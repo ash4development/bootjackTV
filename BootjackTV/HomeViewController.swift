@@ -25,6 +25,11 @@ class HomeViewController: UIViewController {
     }
     @IBOutlet var selectedImageView: RadialGradientImageView!
     @IBOutlet var activityIndicatorView: UIActivityIndicatorView!
+    @IBOutlet var logoImageView: UIImageView! {
+        didSet {
+            logoImageView.isHidden = true
+        }
+    }
     let sectionTitleKey = UICollectionView.elementKindSectionHeader
     let focusGuide = UIFocusGuide()
     var currentAlbumPage: Int = 1
@@ -62,6 +67,7 @@ class HomeViewController: UIViewController {
         videoPlayerVC.delegate = self
         videoPlayerVC.showsPlaybackControls = false
         present(videoPlayerVC, animated: false) {
+            self.logoImageView.isHidden = false
             self.player.play()
         }
     }

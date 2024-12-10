@@ -26,11 +26,23 @@
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="kOf-gH-iTz" customClass="RadialGradientImageView" customModule="BootjackTV" customModuleProvider="target">
                                         <rect key="frame" x="552" y="0.0" width="1288" height="540"/>
                                     </imageView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="80" translatesAutoresizingMaskIntoConstraints="NO" id="r9G-qv-3hH">
-                                        <rect key="frame" x="0.0" y="60" width="1760" height="159"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="r9G-qv-3hH">
+                                        <rect key="frame" x="0.0" y="60" width="1760" height="284"/>
                                         <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="tKx-LN-fiK">
+                                                <rect key="frame" x="0.0" y="0.0" width="1760" height="150"/>
+                                                <subviews>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon" translatesAutoresizingMaskIntoConstraints="NO" id="Vf4-Nm-1vV">
+                                                        <rect key="frame" x="0.0" y="0.0" width="130" height="150"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="150" id="P5a-6S-cZ7"/>
+                                                            <constraint firstAttribute="width" constant="130" id="WNS-te-gRl"/>
+                                                        </constraints>
+                                                    </imageView>
+                                                </subviews>
+                                            </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="BOY-x0-0qK">
-                                                <rect key="frame" x="0.0" y="0.0" width="1760" height="159"/>
+                                                <rect key="frame" x="0.0" y="150" width="1760" height="134"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aOk-ES-EC7">
                                                         <rect key="frame" x="0.0" y="0.0" width="1760" height="84"/>
@@ -51,16 +63,16 @@
                                                         </constraints>
                                                     </stackView>
                                                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3Nz-hj-WkU">
-                                                        <rect key="frame" x="0.0" y="84" width="1760" height="75"/>
+                                                        <rect key="frame" x="0.0" y="84" width="1760" height="50"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pc7-CW-kZp">
-                                                                <rect key="frame" x="0.0" y="0.0" width="1232" height="75"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="1232" height="50"/>
                                                                 <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PUG-8T-zTS">
-                                                                <rect key="frame" x="1232" y="0.0" width="528" height="75"/>
+                                                                <rect key="frame" x="1232" y="0.0" width="528" height="50"/>
                                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             </view>
                                                         </subviews>
@@ -167,6 +179,7 @@
                     <connections>
                         <outlet property="activityIndicatorView" destination="Cw4-Av-Hau" id="puC-M1-76B"/>
                         <outlet property="collectionView" destination="rsR-qo-R09" id="kPw-yC-HbS"/>
+                        <outlet property="logoImageView" destination="Vf4-Nm-1vV" id="4XV-kM-Gf6"/>
                         <outlet property="selectedDescriptionLabel" destination="Pc7-CW-kZp" id="kcc-yD-G8U"/>
                         <outlet property="selectedImageView" destination="kOf-gH-iTz" id="UU8-tj-qti"/>
                         <outlet property="selectedTitleLabel" destination="TUV-H7-eGe" id="5Lb-J1-EfW"/>
@@ -177,4 +190,7 @@
             <point key="canvasLocation" x="2272" y="3"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="icon" width="272" height="314"/>
+    </resources>
 </document>
